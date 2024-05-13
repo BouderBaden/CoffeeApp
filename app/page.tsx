@@ -35,7 +35,7 @@ export default function Home() {
    <>
     <ToastContainer />
     <Header />
-    <Galerie dataProducts={dataProducts}    />
+    <Galerie dataProducts={dataProducts}/>
     <Footer />
    </>
   );

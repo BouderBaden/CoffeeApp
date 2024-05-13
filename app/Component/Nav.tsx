@@ -36,13 +36,14 @@ export default function Nav() {
           onClick={handleCartModal}
           className="p-2 flex items-center justify-center rounded-full w-8 h-8 transition ease-in-out hover:bg-gray-400 hover:text-white cursor-pointer relative"
             >
-            <span className="absolute top-0 right-0 bg-red-500 rounded-full p-1 text-[11px] flex items-center justify-center h-4 w-4">
-              {totalProductCount}
-            </span>
+            {totalProductCount > 0 && (
+              <span className="absolute top-0 right-0 bg-red-500 rounded-full p-1 text-[11px] flex items-center justify-center h-4 w-4">
+                {totalProductCount}
+              </span>
+            )}
             <FaCartShopping />
           </button>
 
-          
         </div>
 
       <CartModal cartModalOpen={cartModalOpen} handleCartModal={handleCartModal}  />
